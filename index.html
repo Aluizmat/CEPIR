@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CEPIR</title>
+    <title>CEPIR - Campeonato Educacional Robótica</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -31,7 +31,7 @@
     </header>
 
     <!-- Countdown Section -->
-    <section class="py-10 fundoCardPadrao">
+    <section class="py-10 fundoCardPadrao" id="aberturaInsc">
         <div class="container mx-auto px-6">
             <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-12" data-aos="fade-up">
                 Tempo para abertura das inscrições
@@ -112,7 +112,7 @@
     </section>
 
     <!-- Tech Showcase Section -->
-    <section class="py-16 bg-white">
+    <section class="py-16 bg-white" id="categorias">
         <div class="container mx-auto px-6">
             <h2 class="text-3xl font-bold text-center text-white-900 mb-12" data-aos="fade-up">
                 Categorais por nível
@@ -153,7 +153,7 @@
     </section>
 
      <!-- About Section -->
-     <section class="py-16 fundoCardPadrao">
+     <section class="py-16 fundoCardPadrao" id="sobreCompeticao">
         <div class="container mx-auto">
             <div class="mx-auto px-6 text-center">
                 <h2 class="text-3xl md:text-4xl font-bold text-white mb-6" data-aos="fade-up">
@@ -293,7 +293,7 @@
             <h2 class="text-3xl font-bold text-center text-gray-900 mb-12" data-aos="fade-up">
                 Inscreva-se no <span class="gradient-text">CEPIR</span>
             </h2>
-            <form class="space-y-6" data-aos="fade-up" data-aos-delay="100" method="POST" action="https://formsubmit.co/aluizmat@gmail.com">
+            <form id="inscricao" class="space-y-6" data-aos="fade-up" data-aos-delay="100" method="POST" action="https://formsubmit.co/aluizmat@gmail.com">
                 <!-- Desativa o CAPTCHA do FormSubmit -->
                 <input type="hidden" name="_captcha" value="false">
                 
@@ -605,11 +605,11 @@
                 <div>
                     <h3 class="text-xl font-bold mb-4">Links Rápidos</h3>
                     <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">abertura das inscrições</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">inscrição</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">modalidades disponíveis</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">categorias de participação</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">sobre a competição</a></li>
+                        <li><a href="#aberturaInsc" class="text-gray-400 hover:text-white transition">abertura das inscrições</a></li>
+                        <li><a href="#inscricao" class="text-gray-400 hover:text-white transition">inscrição</a></li>
+                        <li><a href="#modalidadesDisponiveis" class="text-gray-400 hover:text-white transition">modalidades disponíveis</a></li>
+                        <li><a href="#categorias" class="text-gray-400 hover:text-white transition">categorias de participação</a></li>
+                        <li><a href="#sobreCompeticao" class="text-gray-400 hover:text-white transition">sobre a competição</a></li>
                     </ul>
                 </div>
             </div>
@@ -622,4 +622,3 @@
     <script src="assets\js\script.js"></script>
 </body>
 </html>
-
