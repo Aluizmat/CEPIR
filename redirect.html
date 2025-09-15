@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obrigado pela Inscrição!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="assets\css\styleRedirect.css">
+    <link rel="shortcut icon" href="assets\imgs\icone.jpeg" type="image/x-icon">
+</head>
+<body class="min-h-screen gradient-bg flex items-center justify-center p-4">
+    <div id="confetti-container" class="fixed inset-0 pointer-events-none"></div>
+    
+    <div class="bg-white rounded-2xl shadow-2xl p-8 max-w-md w-full mx-4 text-center relative overflow-hidden" data-aos="zoom-in" data-aos-duration="1000">
+        <div class="absolute -top-20 -right-20 w-40 h-40 bg-purple-200 rounded-full opacity-20"></div>
+        <div class="absolute -bottom-20 -left-20 w-40 h-40 bg-blue-200 rounded-full opacity-20"></div>
+        
+        <div class="relative z-10">
+            <div class=" mb-6 flex items-center justify-center float-animation">
+                <img src="assets\imgs\iconePag.png" alt="">
+            </div>
+            
+            <h1 class="text-3xl font-bold text-gray-800 mb-4">Inscrição enviada!</h1>
+            <p class="text-lg text-gray-600 mb-8">
+                Obrigado por se inscrever na competição! Fique atento as próximas etapas.
+            </p>
+            
+            <button onclick="history.back()" class="btn-primary hover:from-blue-600 hover:to-purple-700 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center mx-auto">
+                <i data-feather="arrow-left" class="mr-2 w-5 h-5"></i>
+                Voltar
+            </button>
+        </div>
+    </div>
+
+    <script src="assets\js\scriptRedirect.js"></script>
+</body>
+</html>

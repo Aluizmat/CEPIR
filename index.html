@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CEPIR</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <link rel="stylesheet" href="assets\css\style.css">
+    <link rel="shortcut icon" href="assets\imgs\icone.jpeg" type="image/x-icon">
+</head>
+<body>
+    <!-- Hero Section -->
+    <header class="relative overflow-hidden">
+        <div class="absolute inset-0"></div>
+            <div class="container mx-auto px-6 mt-12 relative z-10">
+                <div class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
+                    <div class="flex justify-center mb-6" data-aos="zoom-in">
+                        <img src="assets\imgs\imgLogo2.png" alt="CEPIR" width="800px">
+                    </div> 
+                    <p data-aos="fade-up" data-aos-delay="100">
+                        1º Campeonato Educacional de Projetos Inovadores de Robótica
+                    </p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Countdown Section -->
+    <section class="py-10 fundoCardPadrao">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-12" data-aos="fade-up">
+                Tempo para abertura das inscrições
+            </h2>
+            <div class="countdown-box p-6 max-w-3xl mx-auto" data-aos="zoom-in"  data-aos-delay="100">
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+                    <div class="countdown-item p-6 text-center" >
+                        <div class="text-4xl md:text-6xl font-bold text-white" id="days">00</div>
+                        <div class="text-white opacity-80">Dias</div>
+                    </div>
+                    <div class="countdown-item p-6 text-center">
+                        <div class="text-4xl md:text-6xl font-bold text-white" id="hours">00</div>
+                        <div class="text-white opacity-80">Horas</div>
+                    </div>
+                    <div class="hidden md:block countdown-item p-6 text-center">
+                        <div class="text-4xl md:text-6xl font-bold text-white" id="minutes">00</div>
+                        <div class="text-white opacity-80">Minutos</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- CTA Section -->
+     <section class="py-16 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-black mb-6" data-aos="fade-up">
+                Em que consiste o <span class="gradient-text">CEPIR</span> ?
+            </h2>
+            <p class="text-xl text-black mb-8 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                O 1ª Campeonato Educacional de Projetos Inovadores de Robótica 2025 visa fomentar competências STEM, pensamento computacional e trabalho colaborativo por meio de desafios práticos e éticos, voltados a estudantes do ensino fundamental e médio.            
+            </p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-16 fundoCardPadrao">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="hidden md:block md:w-1/2 mb-12 md:mb-0" data-aos="fade-right">
+                    <img src="assets\imgs\icone-removebg-preview.png" alt="Robótica Educacional" class="w-500">
+                </div>
+                <div class="md:w-1/2 md:pl-12" data-aos="fade-left">
+                    <h2 class="text-3xl font-bold text-white mb-6">
+                        Sobre o <span class="gradient-text">CEPIR</span>
+                    </h2>
+                    <p class="text-white mb-6">
+                        Com apoio da Escola CEPI  junto a Seduc e da coordenação pedagógica e comissão organizadora o projeto possui por objetivos:
+                    </p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <i data-feather="circle" class="text-green-500 mr-3 mt-1"></i>
+                            <span class="text-white">Promover aprendizagem prática em robótica e programação</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="circle" class="text-green-500 mr-3 mt-1"></i>
+                            <span class="text-white">Desenvolver criatividade, resolução de problemas, comunicação e trabalho em equipe</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="circle" class="text-green-500 mr-3 mt-1"></i>
+                            <span class="text-white">Identificar e premiar soluções técnicas e inovadoras aplicadas por estudantes</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="circle" class="text-green-500 mr-3 mt-1"></i>
+                            <span class="text-white">Desenvolver e aplicar conhecimentos adquiridos nas aulas dos núcleos comum e diversificado nos CEPI’s e escolas afins</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="circle" class="text-green-500 mr-3 mt-1"></i>
+                            <span class="text-white">Desenvolver as habilidades de soft skills, apresentando seus projetos com clareza e objetividade</span>
+                        </li>
+                    </ul>
+                    <a class="countdown-box text-white font-semibold py-3 px-8 rounded-full" href="#modalidadesDisponiveis">
+                        Modalidades disponíveis
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Showcase Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-white-900 mb-12" data-aos="fade-up">
+                Categorais por nível
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="tech-card p-8" data-aos="fade-up" data-aos-delay="100">
+                    <div class="tech-icon">
+                        <i data-feather="cpu" width="40" height="40"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center text-white-900 mb-4">Categoria 1</h3>
+                    <p class="text-white-600 text-center">
+                        6º e 7º ano (Ensino Fundamental).                    
+                    </p>
+                </div>
+                <div class="tech-card p-8" data-aos="fade-up" data-aos-delay="100">
+                    <div class="tech-icon">
+                        <i data-feather="code" width="40" height="40"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center text-white-900 mb-4">Categoria 2</h3>
+                    <p class="text-white-600 text-center">
+                        8º e 9º ano (Ensino Fundamental).
+                     </p>
+                </div>
+                <div class="tech-card p-8" data-aos="fade-up" data-aos-delay="100">
+                    <div class="tech-icon">
+                        <i data-feather="wifi" width="40" height="40"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center text-white-900 mb-4">Categoria 3</h3>
+                    <p class="text-white-600 text-center">
+                        Ensino Médio.                    
+                    </p>
+                </div>
+            </div>
+            <h5 class=" mt-6 text-2xl text-center text-white-900 mb-12" data-aos="fade-up">
+                máximo de 6 alunos + 1 professor/mentor
+            </h5>
+        </div>
+    </section>
+
+     <!-- About Section -->
+     <section class="py-16 fundoCardPadrao">
+        <div class="container mx-auto">
+            <div class="mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-6" data-aos="fade-up">
+                    <span class="gradient-text">A competição</span>
+                </h2>
+            </div>
+            <div class="ml-8 mr-8 flex text-left">
+                <div data-aos="fade-right"  data-aos-delay="150">
+                    <h2 class="text-3xl font-bold text-white mb-6">
+                        Arena e pista
+                    </h2>
+                    <p class="text-white mb-6">
+                        Comissão fornecerá medidas oficiais; equipes devem adaptar seus robôs aos parâmetros divulgados no Anexo técnico, assim como para treino as equipes podem reproduzir a fim de treinar réplicas das provas oficiais.                    
+                    </p>
+                </div>
+            </div>
+            <div class="ml-8 mr-8 flex text-left">
+                <div data-aos="fade-right"  data-aos-delay="250">
+                    <h2 class="text-3xl font-bold text-white mb-6">
+                        Materiais permitidos
+                    </h2>
+                    <p class="text-white mb-6">
+                        kits LEGO Education (fornecidos pela Seduc), Arduino, ESP, sensores comerciais, peças impressas e materiais educativos, ressalta-se as restrições a componentes comerciais perigosos ou que possam trazer danos propositais a equipamentos de terceiros.                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Testimonials Section -->
+     <section class="py-16 bg-gray-100" id="modalidadesDisponiveis">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12" data-aos="fade-up">
+                Modalidades (oficiais) — desafios obrigatórios
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="100">
+                    <a href="#modalidade1e2">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-indigo-100 flex items-center justify-center mr-4">
+                                <i data-feather="user" class="text-indigo-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Batalha Robótica (Sumô)</h4>
+                            </div>
+                        </div>
+                        <p class="text-gray-700">
+                            Arena circular; ganha o robô que empurrar o adversário para fora em confrontos diretos. (Normas técnicas: dimensões máximas, tempo por round e segurança.)
+                        </p>
+                    </a>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="200">
+                    <a href="#modalidade1e2">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center mr-4">
+                                <i data-feather="user" class="text-purple-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Seguidor de Linha</h4>
+                            </div>
+                        </div>
+                        <p class="text-gray-700">
+                            Trajetória com curvas e obstáculos; ganha quem fizer o percurso mais rápido/preciso ou com maior pontuação conforme missão.                    
+                        </p>
+                    </a>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="300">
+                    <a href="#modalidade3e4">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-yellow-100 flex items-center justify-center mr-4">
+                                <i data-feather="user" class="text-yellow-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Cabo de Guerbô (Tração/Força)</h4>
+                            </div>
+                        </div>
+                        <p class="text-gray-700">
+                            Robô que puxe/superar carga até cruzar linha central; avalia-se potência, estratégia e estabilidade.
+                        </p>
+                    </a>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="300">
+                    <a href="#modalidade3e4">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-yellow-100 flex items-center justify-center mr-4">
+                                <i data-feather="user" class="text-yellow-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Resgate / Missão de Resgate (Autônomo)</h4>
+                            </div>
+                        </div>
+                        <p class="text-gray-700">
+                            Robô deve recuperar uma "vítima" (objeto) em ambiente com obstáculos; avalia-se autonomia e robustez.
+                        </p>
+                    </a>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="300">
+                    <a href="modalidade5">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-yellow-100 flex items-center justify-center mr-4">
+                                <i data-feather="user" class="text-yellow-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Soccer / Robô-Soccer (autônomo ou remoto)</h4>
+                            </div>
+                        </div>
+                        <p class="text-gray-700">
+                            partidas rápidas em campo reduzido; destaca estratégia e controle. (modalidade comum em eventos estudantis).
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Section -->
+    <section class="py-16 fundoCardPadrao" data-aos="fade-up">
+        <div class="container mx-auto px-6">
+            <div class="p-8 md:p-12">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="mb-8 md:mb-0">
+                        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6" data-aos="fade-right">
+                            <span class="gradient-text">Elegibilidade e inscrição</span>
+                        </h2>
+                        <p class="text-white mb-6" data-aos="fade-up" data-aos-delay="100">
+                            Podem participar do campeonato estudantes que estejam regularmente matriculados nas séries indicadas no regulamento. As equipes devem ser formadas por alunos pertencentes à mesma categoria. Para efetivar a inscrição, é necessário preencher o formulário online, entregar o termo de autorização assinado pelos responsáveis e, quando solicitado, enviar o resumo do projeto juntamente com fotos do protótipo para validação da inscrição. O período de inscrições será das 8h do dia 29 de setembro de 2025 até às 22h do dia 10 de outubro de 2025.  
+                        </p>
+                    </div>
+                </div>
+              
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Section -->
+    <section class="py-16 bg-white" id="forms">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12" data-aos="fade-up">
+                Inscreva-se no <span class="gradient-text">CEPIR</span>
+            </h2>
+            <form class="space-y-6" data-aos="fade-up" data-aos-delay="100" method="POST" action="https://formsubmit.co/aluizmat@gmail.com">
+                <!-- Desativa o CAPTCHA do FormSubmit -->
+                <input type="hidden" name="_captcha" value="false">
+                
+                <!-- Redireciona após envio -->
+                <input type="hidden" name="_next" value="https://seusite.com/obrigado.html">
+            
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="name" class="block text-gray-700 font-medium mb-2">Nome Completo</label>
+                        <input type="text" id="name" name="nome" placeholder="nome do líder da equipe" required class="input-field w-full px-4 py-3 rounded-lg focus:outline-none">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-gray-700 font-medium mb-2">E-mail</label>
+                        <input type="email" id="email" placeholder="meuemail@gmail.com" name="email" required class="input-field w-full px-4 py-3 rounded-lg focus:outline-none">
+                    </div>
+                </div>
+            
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="school" class="block text-gray-700 font-medium mb-2">Nome da equipe</label>
+                        <input type="text" id="school" name="equipe" placeholder="minhaEquipe" required class="input-field w-full px-4 py-3 rounded-lg focus:outline-none">
+                    </div>
+                    <div>
+                        <label for="grade" class="block text-gray-700 font-medium mb-2">Série/Ano</label>
+                        <input type="text" id="grade" placeholder="3º ano do EM" name="serie" required class="input-field w-full px-4 py-3 rounded-lg focus:outline-none">
+                    </div>
+                </div>
+            
+                <div>
+                    <label for="message" class="block text-gray-700 font-medium mb-2">Demais membros da equipe</label>
+                    <textarea id="message" placeholder="nome dos integrantes da equipe" name="mensagem" rows="4" class="input-field w-full px-4 py-3 rounded-lg focus:outline-none"></textarea>
+                </div>
+            
+                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                    <button type="submit" class="bg-indigo-800 text-white font-semibold py-3 px-8 rounded-full hover:bg-indigo-900 transition">
+                        Enviar Inscrição
+                    </button>
+                </div>
+            </form>            
+        </div>
+    </section>
+
+      <!-- CTA Section -->
+      <section class="py-16 fundoCardPadrao">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6" data-aos="fade-up">
+                Especificação das Modalidades 
+            </h2>
+            <p class="text-xl text-indigo-100 mb-8 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                Cada modalidade possui especificações técnicas que devem ser seguidas a rigor
+            </p>
+            <div class="flex flex-col md:flex-row items-center" id="modalidade1e2">
+                <div class="md:w-1/2 mb-12 md:mb-0" data-aos="fade-right">
+                    <h2 class="text-3xl font-bold text-white mb-6">
+                        <span class="gradient-text">Batalha Robótica (Sumô):</span>
+                    </h2>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <span class="text-white">
+                                O robô de ter as medidas máximas de L x C x A de 20 cm x 20cm x 20cm, com peso máximo de 500 gramas.
+                            </span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-white">
+                                O robô poderá ser feito com kits de robótica educacional ou Arduíno, apenas um controlador por robô e equipamentos que não demostre perigo.
+                            </span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-white">
+                                Com round de 3 minutos o robô deverá empurrar o adversário para que esta saia do círculo de 50 cm de raios da cor preta.
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="md:w-1/2 md:pl-12" data-aos="fade-left">
+                    <h2 class="text-3xl font-bold text-white mb-6">
+                        <span class="gradient-text">Seguidor de Linha:</span>
+                    </h2>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <span class="text-white">
+                                O robô deve ser construído com apenas um kit de robótica educacional ou kit básico do Arduíno (não será aceito módulo conjugado de sensores).
+                            </span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-white">
+                                Os segue linha não terão tamanho definido, contudo o trajeto e obstáculo serão diferenciados de acordo com as categorias
+                            </span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-white">
+                                Os obstáculos serão no formado de primas, cilindro e curvas no trajeto.
+                            </span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-white">
+                                Trajetos diferenciados de acordo com a categoria, nível de dificuldade equivalente a instrução dos estudantes.
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row items-center" id="modalidade3e4">
+                <div class="md:w-1/2 mb-12 md:mb-0" data-aos="fade-right">
+                    <h2 class="text-3xl font-bold text-white mb-6">
+                        <span class="gradient-text">Cabo de Guerbô (Tração/Força):</span>
+                    </h2>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <span class="text-white">
+                                Nessa modalidade a combinação entre força e tração e o ponto chave com isso os competidores podem realizar alianças de cooperatividade, no máximo de duas equipes onde apenas o nome de uma se faz forte e presente na competição.
+                            </span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-white">
+                                Aqui os robôs devem puxar outro robô para atravessar 75% da marca pré-determinada, essa porcentagem e definida pelo juiz da partida.                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="md:w-1/2 md:pl-12" data-aos="fade-left">
+                    <h2 class="text-3xl font-bold text-white mb-6">
+                        <span class="gradient-text">Resgate / Missão de Resgate (Autônomo):</span>
+                    </h2>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <span class="text-white">
+                                Nessa modalidade o robô deve ser totalmente autônomo, podendo esse usar até três sensores repetidos para se adaptar ao ambiente.
+                            </span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-white">
+                                Caminha em um labirinto para buscar um objeto na cor vermelho, levando-o para fora do labirinto.
+                            </span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-white">
+                                Os obstáculos serão no formado de primas, cilindro e curvas no trajeto.
+                            </span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-white">
+                                O labirinto será construído no formato de retângulo de 1,5m x 2m, tendo apenas uma saída/entrada onde o robô resgate deverá entrar e sair com o objeto.
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row items-center" id="modalidade5">
+                <div class="md:w-1/2 mb-12 md:mb-0" data-aos="fade-right">
+                    <h2 class="text-3xl font-bold text-white mb-6">
+                        <span class="gradient-text">Soccer / Robô-Soccer (autônomo ou remoto):</span>
+                    </h2>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <span class="text-white">
+                                Para essa modalidade o limite de tamanho é de no máximo 20 cm × 20 cm × 20 cm máximo
+                            </span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-white">
+                                Cada equipe terá dois jogadores que serão controlados por controle via wifi, Bluetooth ou afins.
+                            </span>                        
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-white">
+                                Cada partida terá 2 minutos, ganha quem fizer o maior número de gols.
+                            </span>
+                        </li>        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6 max-w-4xl" data-aos="fade-up">
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">
+                Perguntas Frequentes
+            </h2>
+            <div class="space-y-4">
+                <div class="border border-gray-200 rounded-xl overflow-hidden" data-aos="fade-right" data-aos-delay="100">
+                    <button onclick="liberafaq('faqDoc')" class="faq-question w-full px-6 py-4 text-left font-medium text-gray-900 bg-gray-50 hover:bg-gray-100 transition flex justify-between items-center">
+                        <span> Documentação exigida / diário de bordo</span>
+                        <i data-feather="chevron-down" class="transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-6 py-4 hidden" id="faqDoc">
+                        <ul>
+                            <li>
+                                <p class="text-gray-700">
+                                    Diário de bordo (registro das atividades, decisões de projeto, testes e problemas).
+                                </p>
+                            </li>
+                            <li>
+                                <p class="text-gray-700">
+                                    Relatório técnico curto (padrão: 1–4 páginas) explicando funcionamento, sensores, estratégias usadas.
+                                </p>
+                            </li>
+                            <li>
+                                <p class="text-gray-700">
+                                    Autorização de divulgação de imagens e participação no campeonato assinado pelos responsáveis legais dos estudantes.
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="border border-gray-200 rounded-xl overflow-hidden" data-aos="fade-left" data-aos-delay="300">
+                    <button onclick="liberafaq('faqComi')" class="faq-question w-full px-6 py-4 text-left font-medium text-gray-900 bg-gray-50 hover:bg-gray-100 transition flex justify-between items-center">
+                        <span>Comissão julgadora e critérios de avaliação</span>
+                        <i data-feather="chevron-down" class="transition-transform duration-300"></i>
+                    </button>
+                    <div id="faqComi" class="faq-answer px-6 py-4 hidden">
+                            <ul>
+                                <li>
+                                    <p class="text-gray-700">
+                                        Comissão técnica composta por professores, especialistas em robótica e convidados.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="text-gray-700">
+                                        Execução técnica / desempenho na prova (40%).
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="text-gray-700">
+                                        Projeto e design (15%).
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="text-gray-700">
+                                        Criatividade e inovação (15%).
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="text-gray-700">
+                                        Documentação e apresentação (15%).
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="text-gray-700">
+                                        Trabalho em equipe / portfólio (15%).
+                                    </p>
+                                </li>
+                            </ul>
+                    </div>
+                </div>
+                <div class="border border-gray-200 rounded-xl overflow-hidden" data-aos="fade-right" data-aos-delay="400">
+                    <button onclick="liberafaq('faqPen')" class="faq-question w-full px-6 py-4 text-left font-medium text-gray-900 bg-gray-50 hover:bg-gray-100 transition flex justify-between items-center">
+                        <span>Penalidades, protestos e apelação</span>
+                        <i data-feather="chevron-down" class="transition-transform duration-300"></i>
+                    </button>
+                    <div id="faqPen" class="faq-answer px-6 py-4 hidden">
+                            <ul>
+                                <li>
+                                    <p class="text-gray-700">
+                                        Penalidades por atraso na entrega, não conformidade técnica e conduta inadequada; regras quantitativas (ex.: -20 pontos por hora de atraso).                                    </p>
+                                </li>
+                                <li>
+                                    <p class="text-gray-700">
+                                        Procedimento de protesto: prazo para apresentação de recurso (ex.: até 30 minutos após divulgação do resultado), com taxa simbólica reembolsável se o recurso for acolhido. (Baseado em práticas de editais e torneios).   
+                                    </p>                                  </p>
+                                </li>
+                            </ul>
+                    </div>
+                </div>
+                <div class="border border-gray-200 rounded-xl overflow-hidden" data-aos="fade-left" data-aos-delay="500">
+                    <button onclick="liberafaq('faqSeg')" class="faq-question w-full px-6 py-4 text-left font-medium text-gray-900 bg-gray-50 hover:bg-gray-100 transition flex justify-between items-center">
+                        <span>Segurança e responsabilidade</span>
+                        <i data-feather="chevron-down" class="transition-transform duration-300"></i>
+                    </button>
+                    <div id="faqSeg" class="faq-answer px-6 py-4 hidden">
+                            <ul>
+                                <li>
+                                    <p class="text-gray-700">
+                                        É obrigatório cumprir normas de segurança; proibido uso de materiais cortantes, inflamáveis ou perigosos.
+                                    </p>                                </li>
+                                <li>
+                                    <p class="text-gray-700">
+                                        Escola/organização não se responsabiliza por danos ocorridos por uso indevido de equipamentos; pais/responsáveis devem assinar termo de autorização.                                    </p>
+                                </li>
+                            </ul>
+                    </div>
+                </div>
+                <div class="border border-gray-200 rounded-xl overflow-hidden" data-aos="fade-right" data-aos-delay="500">
+                    <button onclick="liberafaq('faqPre')" class="faq-question w-full px-6 py-4 text-left font-medium text-gray-900 bg-gray-50 hover:bg-gray-100 transition flex justify-between items-center">
+                        <span>Premiação</span>
+                        <i data-feather="chevron-down" class="transition-transform duration-300"></i>
+                    </button>
+                    <div id="faqPre" class="faq-answer px-6 py-4 hidden">
+                        <p class="text-gray-700">
+                             Certificados para todos; medalhas/troféus para 1º/2º/3º de cada categoria; menções honrosas para inovação, sustentabilidade e melhor documentação.
+                        </p> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="fundoCardPadrao text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">CEPIR</h3>
+                    <p class="text-gray-400">
+                        1º Campeonato Educacional de Projetos Inovadores de Robótica
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Links Rápidos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">abertura das inscrições</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">inscrição</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">modalidades disponíveis</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">categorias de participação</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">sobre a competição</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500">
+                <p>&copy; 2025 CEPI. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets\js\script.js"></script>
+</body>
+</html>
